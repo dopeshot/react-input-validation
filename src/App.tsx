@@ -1,25 +1,23 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { FormWithFormik } from './components/FormWithFormik';
+import { FormWithFormikYup } from './components/FormWithFormikYup';
+import { FormWithOutLibs } from './components/FormWithOutLibs';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+  return (<>
+    <div style={{ backgroundColor: "rgb(165 243 252)" }}>
+      <h3>FormWithFormikYup</h3>
+      <FormWithFormikYup />
     </div>
+    <div style={{ backgroundColor: "rgb(167 243 208)" }}>
+      <h3>FormWithFormik</h3>
+      <FormWithFormik />
+    </div>
+    <div style={{ backgroundColor: "rgb(245 208 254)" }}>
+      <h3>FormWithOutLibs</h3>
+      <FormWithOutLibs />
+    </div>
+  </>
   );
 }
 
